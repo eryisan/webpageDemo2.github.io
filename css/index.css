@@ -1,0 +1,478 @@
+/*  BEM 设计模式
+
+    B模块   没有前缀,多个单词用-连接
+    E元素   元素在模块之后,可以有多个层级,用__连接
+    M修饰   某元素,或某模块特别的状态,必须有一个状态名和值,用_连接
+
+*/
+
+
+/* 头部 */
+.header{
+    background:transparent;
+    position:relative;
+}
+
+.header__wrap{
+    width:100%;
+    height:60px;
+    position:absolute;
+    top:0;
+    left:0;
+}
+
+.header__logo{
+    width:160px;
+    height:42px;
+    line-height:42px;
+    text-indent:50px;
+    font-size:19px;
+    font-weight:bold;
+    color:#f3f5f7;
+    background:url('../img/logo.png') no-repeat left center;
+    background-size:40px 40px;
+    position:absolute;
+    left:20px;
+    top:50%;
+    margin-top:-21px;
+}
+
+.header__nav{
+    height:42px;
+    position:absolute;
+    right:20px;
+    top:50%;
+    margin-top:-21px;
+    overflow:hidden;
+}
+
+.header__nav-item{
+    display:block;
+    float:left;
+    width:60px;
+    padding-right:40px;
+    height:42px;
+    text-align:center;
+    line-height:42px;
+    font-size:15px;
+    color:#f3f5f7;
+}
+
+.header__logo:hover,
+.header__nav-item:hover{
+    color:#f01400;
+    cursor:pointer;
+}
+
+.header__nav-item_custom_bottom:hover{
+    background:rgba(240,20,0,0.9);
+    color:#f3f5f7;
+    box-shadow:0 0 4px #f3f5f7;
+    font-weight:bolder;
+    font-size:16px;
+}
+
+.header__nav-item_custom_bottom{
+    width:95px;
+    color:#f3f5f7;
+    font-weight:bold;
+    background:#f01400;
+    text-align:center;
+    margin-right:40px;
+    padding:0;
+    border-radius:5px;
+}
+
+/* JS交互 */
+.header__nav-item_status_active{
+    color:#f01400;
+}
+
+
+/* 第二屏 */
+.screen-1{
+    height:640px;
+    background:url(../img/sc1.jpg) no-repeat center;
+    background-size:cover;
+}
+
+.screen-1__heading{
+    font-size:47px;
+    color:#f3f5f7;
+    text-align:center;
+    line-height:47px;
+    padding-top:200px;
+}
+
+.screen-1__subheading{
+    font-size:16px;
+    color:#f3f5f7;
+    text-align:center;
+    line-height:22px;
+    padding-top:30px;
+}
+
+
+/* 第二屏 */
+.screen-2{
+    height:640px;
+    background-color:#f3f5f7;
+    position:relative;
+}
+
+.screen-2__heading{
+    font-size:47px;
+    color:#07111b;
+    text-align:center;
+    line-height:47px;
+    padding-top:86px;
+}
+
+.screen-2__underline{
+    width:56px;
+    height:5px;
+    background-color:#f01400;
+    margin:32px auto 0px;
+}
+
+.screen-2__subheading{
+    font-size:16px;
+    color:#07111b;
+    text-align:center;
+    line-height:22px;
+    padding-top:19px;
+}
+
+.screen-2__human{
+    width:276px;
+    height:380px;
+    background:url(../img/sc2-1.png) no-repeat center;
+    position:absolute;
+    left:50%;
+    margin-left:-138px;
+    bottom:0;
+    z-index:3;
+}
+
+.screen-2__rocket{
+    width:266px;
+    height:205px;
+    background:url(../img/sc2-2.png) no-repeat center;
+    position:absolute;
+    left:50%;
+    margin-left:-47px;
+    bottom:105px;
+    z-index:2;
+
+}
+
+.screen-2__bg{
+    width:750px;
+    height:361px;
+    background:url(../img/sc2.png) no-repeat center;
+    position:absolute;
+    left:50%;
+    margin-left:-375px;
+    bottom:0;
+    z-index:1;
+}
+
+
+/* 第三屏 */
+.screen-3{
+    height:640px;
+    background-color:#2b333b;
+    background-size:cover;
+    position:relative;
+}
+
+.screen-3__wrap{
+    width:1200px;
+    height:640px;
+    margin:0 auto;
+    position:relative;
+}
+
+.screen-3__heading{
+    font-size:47px;
+    color:#f3f5f7;
+    line-height:47px;
+    padding-top:224px;
+    padding-left:650px;
+}
+
+.screen-3__underline{
+    width:56px;
+    height:5px;
+    background-color:#f01400;
+    margin:29px 0px 0px 650px;
+}
+
+.screen-3__subheading{
+    font-size:16px;
+    color:#f3f5f7;
+    line-height:22px;
+    padding-top:23px;
+    padding-left:650px;
+}
+
+.screen-3__bg{
+    width:648px;
+    height:640px;
+    background:url('../img/sc3.png') no-repeat center;
+    background-size:contain;
+    position:absolute;
+    top:0;
+    left:-100px;
+}
+
+.screen-3__language{
+    width:515px;
+    height:67px;
+    position:absolute;
+    bottom:45px;
+    left:650px;
+    overflow:hidden;
+}
+
+.screen-3__language__item{
+    float:left;
+    width:67px;
+    height:67px;
+    margin-right:36px;
+    font-size:16px;
+    text-align:center;
+    line-height:67px;
+    border-radius:50%;
+    box-sizing: border-box;
+    cursor:pointer;
+}
+
+.screen-3__language__item:hover{
+    transform: scale(0.9);
+}
+
+.screen-3__language__item_1{
+    border:2px solid #226f96;
+    color:#226f96;
+}
+
+.screen-3__language__item_2{
+    border:2px solid #475a9e;
+    color:#475a9e;
+}
+
+.screen-3__language__item_3{
+    border:2px solid #964d55;
+    color:#964d55;
+}
+
+.screen-3__language__item_4{
+    border:2px solid #3c8da1;
+    color:#3c8da1;
+}
+
+.screen-3__language__item_5{
+    border:2px solid #5d9164;
+    color:#5d9164;
+}
+
+
+/* 第四屏 */
+.screen-4{
+    height:640px;
+    background-color:#f3f5f7;
+    background-size:cover;
+    position:relative;
+}
+
+.screen-4__wrap{
+    width:1200px;
+    height:640px;
+    margin:0 auto;
+    position:relative;
+}
+
+.screen-4__heading{
+    font-size:47px;
+    color:#07111b;
+    text-align:center;
+    line-height:47px;
+    padding-top:87px;
+}
+
+.screen-4__underline{
+    width:56px;
+    height:5px;
+    background-color:#f01400;
+    margin:36px auto 0px;
+}
+
+.screen-4__subheading{
+    font-size:16px;
+    color:#07111b;
+    text-align:center;
+    line-height:16px;
+    padding-top:22px;
+
+}
+
+.screen-4__features{
+    width:1200px;
+    height:150px;
+    position:absolute;
+    top:300px;
+    margin-left:80px;
+}
+
+.screen-4__features__item{
+    float:left;
+    position:relative;
+    width:163px;
+    height:150px;
+    margin-right:130px;
+    text-align:center;
+    background-size:cover;
+    cursor:pointer;
+}
+
+.screen-4__features__item:hover{
+    transform: scale(1.1);
+    box-shadow:0 0 5px rgba(0,0,0,0.1);
+}
+
+.screen-4__features__item_text{
+    width:100%;
+    height:16px;
+    font-size:16px;
+    font-weight:bold;
+    line-height:16px;
+    color:#07111b;
+    position:absolute;
+    bottom:0px;
+}
+
+.screen-4__features__item_1{
+    background:url('../img/sc4-1.png') no-repeat center;
+}
+
+.screen-4__features__item_2{
+    background:url('../img/sc4-2.png') no-repeat center;
+}
+
+.screen-4__features__item_3{
+    background:url('../img/sc4-3.png') no-repeat center;
+}
+
+.screen-4__features__item_4{
+    background:url('../img/sc4-4.png') no-repeat center;
+}
+
+
+/* 第五屏 */
+.screen-5{
+    height:640px;
+    background:url('../img/sc5.jpg') no-repeat center;
+    background-size:cover;
+    position:relative;
+}
+
+.screen-5__bg{
+    background:url('../img/sc5-1.png') no-repeat center bottom;
+    width:200px;
+    height:200px;
+    margin:0 auto;
+    padding-top:100px;
+}
+.screen-5__heading{
+    font-size:47px;
+    color:#f3f5f7;
+    text-align:center;
+    line-height:47px;
+    padding-top:60px;
+}
+
+.screen-5__underline{
+    width:56px;
+    height:5px;
+    background-color:#f3f5f7;
+    margin:30px auto 0px;
+}
+
+.screen-5__subheading{
+    font-size:16px;
+    color:#f3f5f7;
+    text-align:center;
+    line-height:16px;
+    padding-top:28px;
+}
+
+
+/* 了解学习体验 */
+.screen-learn{
+    height:60px;
+    padding:60px 0;
+    background:#f3f5f7;
+    background-size:cover;
+    position:relative;
+    text-align:center;
+}
+
+.screen-learn__button{
+    display:inline-block;
+    width:240px;
+    height:60px;
+    font-size:18px;
+    font-weight:bold;
+    text-align:center;
+    line-height:60px;
+    color:#07111b;
+    border:1.2px solid #07111b;
+    border-radius:5px;
+}
+
+.screen-learn__button:hover{
+    background:rgba(243,245,247,0.9);
+    color:#07111b;
+    box-shadow:0 0 4px #07111b;
+    font-weight:bolder;
+    font-size:19px;
+}
+
+
+/* 底部 */
+.footer{
+    background-color:#07111b;
+    background-size:cover;
+    height:100px;
+}
+
+
+.footer__nav{
+    width:1200px;
+    height:60px;
+    margin:0 auto;
+    text-align:center;
+}
+
+.footer__nav-item{
+    display:inline-block;
+    font-size:13px;
+    color:#f3f5f7;
+    text-align:center;
+    line-height:60px;
+    margin:5px 20px;
+}
+
+.footer__nav-item:hover{
+    color:#f01400;
+}
+
+.footer__copy{
+    width:1200px;
+    height:30px;
+    font-size:16px;
+    text-align:center;
+    margin:0 auto;
+    color:#c0c0c0;
+}
