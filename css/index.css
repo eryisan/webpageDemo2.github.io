@@ -11,6 +11,7 @@
 .header{
     background:transparent;
     position:relative;
+    z-index:2;
 }
 
 .header__wrap{
@@ -475,4 +476,53 @@
     text-align:center;
     margin:0 auto;
     color:#c0c0c0;
+}
+
+
+/* 侧边导航 */
+
+.outline{
+    position:fixed;
+    right:2px;
+    bottom:150px;
+    background:#f3f5f7;
+    padding:5px 10px;
+    box-shadow:0px 0px 8px rgba(43,51,59,0.7);
+    z-index:3;
+    border-radius:30px 0 0 30px;
+}
+
+.outline__item{
+    display:block;
+    color:#2b333b;
+    width:30px;
+    height:40px;
+    text-align:center;
+    line-height:40px;
+    font-weight:bold;
+    border-top:1px solid #2b333b;
+}
+
+.outline__item:first-child{
+    border-top:none;
+}
+
+
+/* 活跃状态 */
+.header__nav-item_status_active{
+    color:#f01400;
+}
+
+.outline__item_status_active{
+    color:#f01400;
+}
+
+.header__nav-tip{
+    position:absolute;
+    bottom:0;
+    left:0;
+    background-color:#f01400;
+    width:60px;
+    height:3px;
+    transition:all 0.5s;
 }
