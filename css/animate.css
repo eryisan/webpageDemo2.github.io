@@ -228,3 +228,38 @@
     animation:tune 2s infinite 1s;
 }
 
+
+/* 导航条 status black 样式 */
+.header__wrap{
+    transition:all 1s;
+}
+
+.header__wrap_status_white{
+    background-color:rgba(255,255,255,0.5);
+    position:fixed;
+    top:0;
+    left:0;
+    right:0;
+    z-index:4;
+    box-shadow:0 0 6px rgba(43,51,59,0.7) inset;
+}
+.header__wrap_status_white .header__logo,
+.header__wrap_status_white .header__nav-item{
+    color:#07111b;
+}
+
+/*  */
+.header__wrap_status_white .header__nav-item_status_active{
+    color:#f01400;
+}
+
+/* 侧边导航 _status_in */
+.outline{
+    opacity:0;
+    transition:all 1s;
+    transform:translate(100%,0);
+}
+.outline_status_in{
+    opacity:1;
+    transform:translate(0,0);
+}
